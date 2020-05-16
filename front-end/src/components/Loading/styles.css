@@ -1,0 +1,83 @@
+.loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+}
+
+.loading {
+  position: absolute;
+  z-index: 999;
+  background: rgba(255, 255, 255, .5);
+  min-width: 100px;
+  min-height:50px;
+  width: 100%;
+  height: 100%;
+}
+
+.loading .circle {
+  position: absolute;
+  display: inline-block;
+  top: 2px;
+  background: url("~assets/loading/loading-img.png") no-repeat;
+  background-size: contain;
+}
+
+.loading .circle-one {
+  position: absolute;
+
+
+  left: calc(47% - 50px);
+
+  width: 50px;
+  height: 50px;
+
+  animation: spin 5s infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+.loading .circle-two {
+  left: calc((47% - 50px) + 47px);
+  width: 40px;
+  height: 40px;
+  animation: spin-aclockwise 3s infinite;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+
+.loading .circle-three {
+  left: calc((47% - 50px) + 82px);
+  top: 19px;
+  width: 35px;
+  height: 35px;
+
+  animation: spin 3.5s infinite;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-aclockwise {
+  from {
+    transform: rotate(-12deg);
+  }
+  to {
+    transform: rotate(-372deg);
+  }
+}
+
+#div {
+  width: 200px;
+  height: 200px;
+}
